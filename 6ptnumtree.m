@@ -6,7 +6,48 @@
 (* k1=-p1 --- k2=p1'*)
 
 (*6pt numerator*)
-M6numR[{k1_,a2_,a3_,a4_,a5_,k2_},L_]:=1/48 (8 ek[L][a2,k1] (3 (s[a2,a4]+s[a3,a4]) e[L][a4,a5] ek[L][a3,a2]+3 s[a4,k1] e[L][a4,a5] (ek[L][a3,a2]+ek[L][a3,k1])+s[a2,a3] (-2 e[L][a4,a5] ek[L][a3,a4]+e[L][a3,a5] (3 ek[L][a4,a2]+2 ek[L][a4,a3]))+3 s[a2,a3] e[L][a3,a5] ek[L][a4,k1]+3 s[a2,a3] e[L][a3,a4] ek[L][a5,a2]-12 ek[L][a3,a2] ek[L][a4,a2] ek[L][a5,a2]+2 s[a2,a3] e[L][a3,a4] ek[L][a5,a3]+4 s[a2,a3] e[L][a3,a4] ek[L][a5,a4]+3 s[a2,a3] e[L][a3,a4] ek[L][a5,k1]+s[a3,k1] (-2 e[L][a4,a5] ek[L][a3,a4]+e[L][a3,a5] (3 ek[L][a4,a2]+2 ek[L][a4,a3]+3 ek[L][a4,k1])+e[L][a3,a4] (3 ek[L][a5,a2]+2 ek[L][a5,a3]+4 ek[L][a5,a4]+3 ek[L][a5,k1]))+3 (4 ek[L][a3,a2] (-ek[L][a4,a2] (ek[L][a5,a3]+ek[L][a5,a4]+ek[L][a5,k1])-ek[L][a4,a3] (ek[L][a5,a2]+ek[L][a5,a3]+ek[L][a5,a4]+ek[L][a5,k1])-ek[L][a4,k1] (ek[L][a5,a2]+ek[L][a5,a3]+ek[L][a5,a4]+ek[L][a5,k1]))+ek[L][a3,k1] (s[a2,a4] e[L][a4,a5]+s[a3,a4] e[L][a4,a5]-4 (ek[L][a4,a2]+ek[L][a4,a3]+ek[L][a4,k1]) (ek[L][a5,a2]+ek[L][a5,a3]+ek[L][a5,a4]+ek[L][a5,k1]))))+s[a2,k1] (-3 s[a2,a3] (e[L][a2,a5] e[L][a3,a4]+e[L][a2,a4] e[L][a3,a5])-3 (s[a2,a4]+3 s[a3,a4]) e[L][a2,a3] e[L][a4,a5]-2 e[L][a4,a5] (3 s[a4,k1] e[L][a2,a3]-6 ek[L][a2,a3] ek[L][a3,a4]+ek[L][a2,a4] (6 ek[L][a3,a2]+8 ek[L][a3,k1]))+2 (-3 s[a3,k1] (e[L][a2,a5] e[L][a3,a4]+e[L][a2,a4] e[L][a3,a5])-6 (e[L][a3,a5] ek[L][a2,a3]-e[L][a2,a5] ek[L][a3,a2]) (ek[L][a4,a2]+ek[L][a4,a3])+6 (-e[L][a3,a4] ek[L][a2,a3] (ek[L][a5,a2]+ek[L][a5,a3]+2 ek[L][a5,a4])+e[L][a2,a4] ek[L][a3,a2] (ek[L][a5,a2]+ek[L][a5,a3]+2 ek[L][a5,a4])+e[L][a2,a3] (ek[L][a4,a2] (ek[L][a5,a2]+2 ek[L][a5,a3]+ek[L][a5,a4])+ek[L][a4,a3] (2 ek[L][a5,a2]+3 (ek[L][a5,a3]+ek[L][a5,a4]))))+8 (-e[L][a3,a4] ek[L][a2,a3]+e[L][a2,a4] ek[L][a3,a2]+e[L][a2,a3] (ek[L][a4,a2]+2 ek[L][a4,a3])) ek[L][a5,k1]+2 ek[L][a3,k1] (e[L][a2,a5] (4 ek[L][a4,a2]+6 (ek[L][a4,a3]+ek[L][a4,k1]))+2 e[L][a2,a4] (2 ek[L][a5,a2]+3 ek[L][a5,a3]+4 ek[L][a5,a4]+3 ek[L][a5,k1]))+2 ek[L][a4,k1] (-4 e[L][a3,a5] ek[L][a2,a3]+4 e[L][a2,a5] ek[L][a3,a2]+2 e[L][a2,a3] (2 ek[L][a5,a2]+4 ek[L][a5,a3]+3 (ek[L][a5,a4]+ek[L][a5,k1]))))));
+M6numR[{k1_, a2_, a3_, a4_, a5_, k2_}, L_]:= 
+    (I/24)*(8*ek[L][a2, k1]*(3*(s[a2, a4] + s[a3, a4])*e[L][a4, a5]*
+         ek[L][a3, a2] + 3*s[a4, k1]*e[L][a4, a5]*(ek[L][a3, a2] + 
+          ek[L][a3, k1]) + s[a2, a3]*(-2*e[L][a4, a5]*ek[L][a3, a4] + 
+          e[L][a3, a5]*(3*ek[L][a4, a2] + 2*ek[L][a4, a3])) + 
+        3*s[a2, a3]*e[L][a3, a5]*ek[L][a4, k1] + 3*s[a2, a3]*e[L][a3, a4]*
+         ek[L][a5, a2] - 12*ek[L][a3, a2]*ek[L][a4, a2]*ek[L][a5, a2] + 
+        2*s[a2, a3]*e[L][a3, a4]*ek[L][a5, a3] + 4*s[a2, a3]*e[L][a3, a4]*
+         ek[L][a5, a4] + 3*s[a2, a3]*e[L][a3, a4]*ek[L][a5, k1] + 
+        s[a3, k1]*(-2*e[L][a4, a5]*ek[L][a3, a4] + e[L][a3, a5]*
+           (3*ek[L][a4, a2] + 2*ek[L][a4, a3] + 3*ek[L][a4, k1]) + 
+          e[L][a3, a4]*(3*ek[L][a5, a2] + 2*ek[L][a5, a3] + 4*ek[L][a5, a4] + 
+            3*ek[L][a5, k1])) + 
+        3*(4*ek[L][a3, a2]*(-(ek[L][a4, a2]*(ek[L][a5, a3] + ek[L][a5, a4] + 
+               ek[L][a5, k1])) - ek[L][a4, a3]*(ek[L][a5, a2] + 
+              ek[L][a5, a3] + ek[L][a5, a4] + ek[L][a5, k1]) - 
+            ek[L][a4, k1]*(ek[L][a5, a2] + ek[L][a5, a3] + ek[L][a5, a4] + 
+              ek[L][a5, k1])) + ek[L][a3, k1]*(s[a2, a4]*e[L][a4, a5] + 
+            s[a3, a4]*e[L][a4, a5] - 4*(ek[L][a4, a2] + ek[L][a4, a3] + 
+              ek[L][a4, k1])*(ek[L][a5, a2] + ek[L][a5, a3] + ek[L][a5, a4] + 
+              ek[L][a5, k1])))) + s[a2, k1]*
+       (-3*s[a2, a3]*(e[L][a2, a5]*e[L][a3, a4] + e[L][a2, a4]*
+           e[L][a3, a5]) - 3*(s[a2, a4] + 3*s[a3, a4])*e[L][a2, a3]*
+         e[L][a4, a5] - 2*e[L][a4, a5]*(3*s[a4, k1]*e[L][a2, a3] - 
+          6*ek[L][a2, a3]*ek[L][a3, a4] + ek[L][a2, a4]*(6*ek[L][a3, a2] + 
+            8*ek[L][a3, k1])) + 2*(-3*s[a3, k1]*(e[L][a2, a5]*e[L][a3, a4] + 
+            e[L][a2, a4]*e[L][a3, a5]) - 6*(e[L][a3, a5]*ek[L][a2, a3] - 
+            e[L][a2, a5]*ek[L][a3, a2])*(ek[L][a4, a2] + ek[L][a4, a3]) + 
+          6*(-(e[L][a3, a4]*ek[L][a2, a3]*(ek[L][a5, a2] + ek[L][a5, a3] + 2*
+                ek[L][a5, a4])) + e[L][a2, a4]*ek[L][a3, a2]*
+             (ek[L][a5, a2] + ek[L][a5, a3] + 2*ek[L][a5, a4]) + 
+            e[L][a2, a3]*(ek[L][a4, a2]*(ek[L][a5, a2] + 2*ek[L][a5, a3] + 
+                ek[L][a5, a4]) + ek[L][a4, a3]*(2*ek[L][a5, a2] + 
+                3*(ek[L][a5, a3] + ek[L][a5, a4])))) + 
+          8*(-(e[L][a3, a4]*ek[L][a2, a3]) + e[L][a2, a4]*ek[L][a3, a2] + 
+            e[L][a2, a3]*(ek[L][a4, a2] + 2*ek[L][a4, a3]))*ek[L][a5, k1] + 
+          2*ek[L][a3, k1]*(e[L][a2, a5]*(4*ek[L][a4, a2] + 6*(ek[L][a4, a3] + 
+                ek[L][a4, k1])) + 2*e[L][a2, a4]*(2*ek[L][a5, a2] + 
+              3*ek[L][a5, a3] + 4*ek[L][a5, a4] + 3*ek[L][a5, k1])) + 
+          2*ek[L][a4, k1]*(-4*e[L][a3, a5]*ek[L][a2, a3] + 
+            4*e[L][a2, a5]*ek[L][a3, a2] + 2*e[L][a2, a3]*(2*ek[L][a5, a2] + 
+              4*ek[L][a5, a3] + 3*(ek[L][a5, a4] + ek[L][a5, k1]))))));
 
 
 (* 6 point tree*)

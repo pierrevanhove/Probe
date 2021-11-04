@@ -5,7 +5,7 @@
 (* k1+k2+a1+..+an=0*)
 (* k1=-p1 --- k2=p1'*)
 (*5pt numerator*)
-M5numR[{k1_,a2_,a3_,a4_,k2_},L_]:=1/6 (3 ek[L][a2,k1] (s[a2,a3] e[L][a3,a4]+s[a3,k1] e[L][a3,a4]-4 (ek[L][a3,a2]+ek[L][a3,k1]) (ek[L][a4,a2]+ek[L][a4,a3]+ek[L][a4,k1]))+s[a2,k1] (-2 e[L][a3,a4] ek[L][a2,a3]+e[L][a2,a4] (2 ek[L][a3,a2]+3 ek[L][a3,k1])+e[L][a2,a3] (2 ek[L][a4,a2]+4 ek[L][a4,a3]+3 ek[L][a4,k1])));
+M5numR[{k1_, a2_, a3_, a4_, k2_}, L_]:= ((-I/3)*(3*ek[L][a2, k1]*(s[a2, a3]*e[L][a3, a4] + s[a3, k1]*e[L][a3, a4] - 4*(ek[L][a3, a2] + ek[L][a3, k1])* (ek[L][a4, a2] + ek[L][a4, a3] + ek[L][a4, k1])) + s[a2, k1]*(-2*e[L][a3, a4]*ek[L][a2, a3] + e[L][a2, a4]* (2*ek[L][a3, a2] + 3*ek[L][a3, k1]) + e[L][a2, a3]* (2*ek[L][a4, a2] + 4*ek[L][a4, a3] + 3*ek[L][a4, k1]))))/Sqrt[2];
 
 
 (* 5 point tree*)
